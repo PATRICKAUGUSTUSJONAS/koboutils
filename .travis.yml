@@ -3,9 +3,7 @@ go:
  - "1.10"
 
 script:
- - make clean
- - make test
- - make build
+ - make release
 
 deploy:
   provider: script
