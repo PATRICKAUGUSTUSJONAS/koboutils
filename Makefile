@@ -16,8 +16,8 @@ build:
 	go build -ldflags "$(ldflags)" -o "build/kobo-info" ./kobo-info
 
 release: clean
-	go get github.com/tcnksm/ghr
-	go get github.com/mholt/archiver/cmd/archiver
+	go get -v github.com/tcnksm/ghr
+	go get -v github.com/mholt/archiver/cmd/archiver
 	
 	GOOS=windows GOARCH=386 go build -ldflags "$(ldflags)" -o "build/kobo-find_windows.exe" ./kobo-find
 	GOOS=linux GOARCH=amd64 go build -ldflags "$(ldflags)" -o "build/kobo-find_linux-x64" ./kobo-find
